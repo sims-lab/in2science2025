@@ -54,7 +54,26 @@ then click the 'Run code' button on the right.
 
 ```
 
-### Exercise with Code
+Take a moment to think about what you are seeing above:
+
+- Can you describe in your own words what this dataset it showing? 
+- What do the rows represent?
+- What do the columns represent?
+- What type of data is present in each column (is it numbers, text, other?)
+
+When you're ready, move on to the next section where we describe the dataset in our own words.
+
+## The decathlon dataset
+
+This dataset contains the results of decathlon events during two athletic meetings which took place one month apart in 2004: the Olympic Games in Athens (23 and 24 August), and the Decastar 2004 (25 and 26 September). 
+
+For both competitions, the following information is available for each athlete:
+
+- performance for each of the 10 events   
+- total number of points (for each event, an athlete earns points based on performance; this is the sum of points scored) 
+- final ranking  
+
+## Exercise with Code
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
 
