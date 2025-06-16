@@ -1,0 +1,24 @@
+Package: in2science2025
+Title: Materials for the in2science WIMM work placement
+Version: 0.0.0.9000
+Authors@R: 
+  c(
+    person("Kevin", "Rue", , "kevin.rue-albrecht@imm.ox.ac.uk", role = c("aut", "cre")),
+    person("Carla", "Cohen", , "carla.cohen@imm.ox.ac.uk", role = c("ctb"))
+  )
+Description:
+  This package defines tutorials for the in2science WIMM work placement.
+  It uses the 'learnr' package to implement those tutorials.
+  The package will be installed in advance and students so that students
+  only need to launch and follow along the tutorial.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
+Imports:
+  factoextra,
+  FactoMineR,
+  learnr,
+  Rfast,
+  shiny,
+  tidyverse
