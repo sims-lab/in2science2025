@@ -28,26 +28,30 @@ In this tutorial, each screen will present you with some information, and code c
 
 ### Exercise
 
-Actually, the dataset that we will analyse is already loaded.
-That dataset is provided by a package called [FactoMineR](https://cran.r-project.org/package=FactoMineR),
+The dataset that we will analyse is provided by a package called [FactoMineR](https://cran.r-project.org/package=FactoMineR),
 in an object called `decathlon`.
+
+To load the dataset, type `data(decathlon)` in the code chunk below,
+then click the 'Run code' button on the right.
+
+```{r data-decathlon, exercise=TRUE}
+
+```
+
+At first glance, nothing seems to have happened.
+However, as promised, the code above *loaded* the dataset in your _R_ session,
+which means that it is now available for use.
+
+Whatever dataset you work with, your first move is usually to have a look at it,
+to get familiar with its contents.
 
 In _R_, typing the name of an object displays the value of that object.
 
-To demonstrate, the code chunk below is already filled with the code `decathlon`.
-You only need to click the button 'Run code'.
+Since the object is called `decathlon`, type `decathlon` in the code chunk below,
+then click the 'Run code' button on the right.
 
 ```{r decathlon, exercise=TRUE}
-decathlon
-```
 
-You can also be more explicit using the `print()` function which displays the value of any object given to it using the parentheses.
-
-Again, the code is given to you here.
-You only need to click the button 'Run code'.
-
-```{r print-decathlon, exercise=TRUE}
-print(decathlon)
 ```
 
 ### Exercise with Code
