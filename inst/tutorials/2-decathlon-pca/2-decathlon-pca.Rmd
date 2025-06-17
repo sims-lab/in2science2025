@@ -65,13 +65,49 @@ When you're ready, move on to the next section where we describe the dataset in 
 
 ## The decathlon dataset
 
-This dataset contains the results of decathlon events during two athletic meetings which took place one month apart in 2004: the Olympic Games in Athens (23 and 24 August), and the Decastar 2004 (25 and 26 September). 
+This dataset contains the results of decathlon events during two athletic meetings which took place one month apart in 2004: the Olympic Games in Athens (23 and 24 August), and the Decastar 2004 (25 and 26 September).
 
 For both competitions, the following information is available for each athlete:
 
 - performance for each of the 10 events   
 - total number of points (for each event, an athlete earns points based on performance; this is the sum of points scored) 
-- final ranking  
+- final ranking
+
+Each athlete is represented by a row in the table.
+
+Each column represents one of the events, except for the last three columns which represent the overall rank, points, and the competition.
+
+## Working with data frames in _R_
+
+In _R_, a dataset shaped like a table (with rows and columns) is called a dataframe.
+
+One of the most common things you will do when working with dataframes is accessing specific columns of data, either to analyse them, or the visualise them.
+
+To access a specific column of the table, you type the name of the table, followed by the "dollar" sign `$` and the name of the column that you want to access.
+For instance, you can get the values in the second column called `Long.jump` by typing `decathlon$Long.jump`.
+Try it below!
+
+```{r decathlon-long-jump, exercise=TRUE}
+
+```
+
+Note that things get a bit more complicated if the name of the column starts with a digit, for instance the first column called `100m`.
+In that case, you need to "backticks" around the name of the column, like so:
+
+```{r decathlon-100m, exercise=TRUE}
+decathlon$`100m`
+```
+
+Thankfully, the RStudio program that we are using to run this tutorial makes coding easier.
+As soon as you type the name of a dataframe followed by the dollar sign,
+it opens a dropdown menu with the list of column names available,
+and autocompletes the correct code for whatever column name you select.
+
+Try it below for the column named `400m`!
+
+```{r decathlon-400m, exercise=TRUE}
+
+```
 
 ## Exercise with Code
 
