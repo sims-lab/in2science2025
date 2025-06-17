@@ -219,7 +219,7 @@ If so, how would you describe it?
 It seems that the fastest an athlete can run, the furthest they can jump.
 Of course, this is not surprising, but here we have data to prove it!
 
-### Addings statistics to visualisations
+### Modelling data
 
 In fact, we shouldn't trust our eyes alone, but rather formally analyse whether the trend is real.
 
