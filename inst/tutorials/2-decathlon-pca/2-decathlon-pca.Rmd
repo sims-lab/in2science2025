@@ -13,6 +13,7 @@ library(FactoMineR)
 library(Rfast)
 library(factoextra)
 knitr::opts_chunk$set(echo = FALSE)
+data("decathlon")
 ```
 
 ## Welcome
@@ -30,17 +31,6 @@ In this tutorial, each screen will present you with some information, and code c
 
 The dataset that we will analyse is provided by a package called [FactoMineR](https://cran.r-project.org/package=FactoMineR),
 in an object called `decathlon`.
-
-To load the dataset, type `data(decathlon)` in the code chunk below,
-then click the 'Run code' button on the right.
-
-```{r data-decathlon, exercise=TRUE}
-
-```
-
-At first glance, nothing seems to have happened.
-However, as promised, the code above *loaded* the dataset in your _R_ session,
-which means that it is now available for use.
 
 Whatever dataset you work with, your first move is usually to have a look at it,
 to get familiar with its contents.
