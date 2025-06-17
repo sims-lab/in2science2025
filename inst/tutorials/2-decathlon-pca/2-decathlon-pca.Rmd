@@ -148,7 +148,61 @@ When you are ready, continue reading below.
 - The first and second graphs show us the distance each competitor threw the javelin.
 - The last graph shows the number of competitors who threw the javelin in groups of 5 metres.
 
-### Asking questions
+## Summarising data
+
+The _R_ programming language is full of functions that can analyse and summarise vast amounts of data.
+
+For example, you might want to ask:
+
+- What is the mean distance javelins were thrown?
+- What is the furthest a javelin was thrown?
+
+In the code chunks below, use the functions `mean()` and `max()` to answer those two questions.
+
+Hint: the numbers you want to analyse are in the column named `Javeline` in the `decathlon` dataset.
+
+```{r mean-javeline, exercise=TRUE}
+# Use this code chunk to calculate the mean
+
+```
+
+```{r max-javeline, exercise=TRUE}
+# Use this code chunk to calculate the maximum
+
+```
+
+### Annotating visualisations
+
+Now that you know how to calculate the mean value for the javeline event,
+you might want to highlight that value in the graph that we made previously to show all athletes.
+
+To achieve this, you need to do two things:
+
+- Copy the earlier code to make the plot showing each athlete, in sorted order.
+- Add a horizontal line at the value of the mean, using the `abline()` function.
+
+Note that the `abline()` function is very flexible, and can draw many different types of lines.
+To clarify that we want a *horizontal* line,
+we need to use the `h=` argument of the function and give it the value at which we want to draw that horizontal line, like so:
+
+```{r plot-abline-javeline, exercise=TRUE}
+plot(sort(decathlon$Javeline))
+abline(h = mean(decathlon$Javeline))
+```
+
+Bonus points:
+
+- Can you change the colour of the line?
+- Can you add a title to the plot?
+
+Edit the code chunk below to try!
+
+```{r plot-abline-javeline-bonus, exercise=TRUE}
+plot(sort(decathlon$Javeline))
+abline(h = mean(decathlon$Javeline))
+```
+
+## Investigating hypotheses
 
 Visualisation can be used to explore the data and investigate hypotheses you may have.
 
