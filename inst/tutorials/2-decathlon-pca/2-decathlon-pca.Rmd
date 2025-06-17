@@ -92,17 +92,6 @@ In that case, you need to add "backticks" around the name of the column, like so
 decathlon$`100m`
 ```
 
-Thankfully, the RStudio program that we are using to run this tutorial makes coding easier.
-As soon as you type the name of a dataframe followed by the dollar sign,
-it opens a dropdown menu with the list of column names available,
-and autocompletes the correct code for whatever column name you select.
-
-Try it below for the column named `400m`!
-
-```{r decathlon-400m, exercise=TRUE}
-
-```
-
 ## Visualising data
 
 Now that you know how to access values in specific columns,
@@ -229,6 +218,58 @@ If so, how would you describe it?
 
 It seems that the fastest an athlete can run, the furthest they can jump.
 Of course, this is not surprising, but here we have data to prove it!
+
+### Addings statistics to visualisations
+
+In fact, we shouldn't trust our eyes alone, but rather formally analyse whether the trend is real.
+
+One simple way to do that is to draw a line that best fits the data;
+this is called a machine learning technique called "linear regression".
+
+In _R_, this can be done using the `lm()` function.
+
+The name of the function stands for "linear model".
+It highlights that the technique "models" the data using a line which describes the relation between two variables.
+
+To illustrate the technique, let's apply it to the same data as above.
+
+The code is bit strange to type, so we're giving it to you here,
+you only need to click 'Run code'.
+
+To summarise:
+
+- We use the `lm()` function to compute a linear model for the 100m and long-jump events.
+- We use the `plot()` function to plot the performance of each individual athlete in those events.
+- We add a (blue) line that represents the linear model computed in the first step.
+
+```{r lm-100m-long-jump, exercise=TRUE, fig.height=7, fig.width=9}
+linear_model <- lm(Long.jump ~ `100m`, data = decathlon)
+plot(decathlon$`100m`, decathlon$Long.jump)
+abline(linear_model, col = "blue")
+```
+
+What do you think about the plot and the trend represented by the linear model?
+
+Although less exciting than a graph, it is possible to "see" the linear model from a numerical perspective.
+Simply type the name of your linear model, to reveal its "coefficients".
+
+```{r lm-100m-long-jump-print, exercise=TRUE}
+linear_model <- lm(Long.jump ~ `100m`, data = decathlon)
+linear_model
+```
+
+Take a moment to think about it.
+A simple way to describe a line is using two coefficients:
+
+- The "slope", which describes how quickly one value increases (or decreases) when the other one increase.
+  In this case, how the distance an athlete can jump decreases, the longer it takes them to run 100 meters.
+- The "intercept", which describes the "baseline" for one value when the other one is 0.
+  In this case, the distance predicted by the model that an athlete would jump if it took them 0 seconds to run 100 meters.
+
+Needless to say, in this case, the intercept value is nonsensical.
+However, it is necessary to describe the linear model,
+as there is a infinite number of lines with the same slope,
+but only one that best fits the data.
 
 ## Exercise with Code
 
