@@ -113,6 +113,30 @@ Try it below for the column named `400m`!
 
 ```
 
+## Visualising data
+
+Now that you know how to access values in specific columns,
+you're only one step away from making graphs (also called "plots") that can help you visualise those values.
+
+There are a number of simple plotting functions available in _R_ that don't look very pretty but get you started quickly.
+
+For instance, the `hist()` function takes a set of values between the parentheses,
+and displays a histogram that shows you how many values it counted in "bins" of equal sizes.
+You can try it by typing `hist(decathlon$Javeline)` in the code chunk below:
+
+```{r hist-javelin, exercise=TRUE}
+
+```
+
+Another plotting function is `plot()`, which takes two sets of values and uses those as the coordinates of points on the x-axis and y-axis, respectively.
+For this to work, the two sets must have the same number of values.
+Also, to give two sets of values to the same function (within the same parentheses), they need to be separated by a comma: `,`.
+For instance, try it by typing `` plot(decathlon$`100m`, decathlon$Long.jump) `` in the code chunk below:
+
+```{r plot-100m-long-jump, exercise=TRUE}
+
+```
+
 ## Exercise with Code
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
