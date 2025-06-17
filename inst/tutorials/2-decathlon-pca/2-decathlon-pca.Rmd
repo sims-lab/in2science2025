@@ -118,24 +118,62 @@ Try it below for the column named `400m`!
 Now that you know how to access values in specific columns,
 you're only one step away from making graphs (also called "plots") that can help you visualise those values.
 
-There are a number of simple plotting functions available in _R_ that don't look very pretty but get you started quickly.
+There are a number of simple plotting functions available in _R_ that can get you started quickly.
+We'll stick with those in this tutorial to keep the code simple,
+but there are more complicated functions that can produce much prettier versions of the same graphics.
 
-For instance, the `hist()` function takes a set of values between the parentheses,
-and displays a histogram that shows you how many values it counted in "bins" of equal sizes.
-You can try it by typing `hist(decathlon$Javeline)` in the code chunk below:
+For instance, the `plot()` function can be given a set of values between the parentheses,
+and displays them in order, at a height that corresponds to each value.
 
-```{r hist-javelin, exercise=TRUE}
+You can try it by typing `plot(decathlon$Javeline)` in the code chunk below.
+
+```{r plot-javelin, exercise=TRUE, fig.height=7, fig.width=9}
 
 ```
+
+This is a bit hard to read,
+let's use the `sort()` function to rearrange the values in increasing order before plotting them.
+
+Here, we give you the code.
+Can you describe how it differs from the code above?
+
+```{r plot-sort-javelin, exercise=TRUE, fig.height=7, fig.width=9}
+plot(sort(decathlon$Javeline))
+```
+
+Another plotting function is `hist()` which takes a set of values between the parentheses,
+and displays a histogram that shows you how many values it counted in a series of "bins" of equal sizes
+going from the smallest to the highest value observed.
+You can try it by typing `hist(decathlon$Javeline)` in the code chunk below:
+
+```{r hist-javelin, exercise=TRUE, fig.height=7, fig.width=9}
+
+```
+
+Take a moment to think about what those graphs represent,
+what they are telling you about the data,
+and whether you can spot any meaningful trends.
+
+When you are ready, continue reading below.
+
+- The first and second graphs show us the distance each competitor threw the javelin.
+- The last graph shows the number of competitors who threw the javelin in groups of 5 metres.
+
+## Asking questions
 
 Another plotting function is `plot()`, which takes two sets of values and uses those as the coordinates of points on the x-axis and y-axis, respectively.
 For this to work, the two sets must have the same number of values.
 Also, to give two sets of values to the same function (within the same parentheses), they need to be separated by a comma: `,`.
 For instance, try it by typing `` plot(decathlon$`100m`, decathlon$Long.jump) `` in the code chunk below:
 
-```{r plot-100m-long-jump, exercise=TRUE}
+```{r plot-100m-long-jump, exercise=TRUE, fig.height=7, fig.width=9}
 
 ```
+
+
+
+
+
 
 ## Exercise with Code
 
