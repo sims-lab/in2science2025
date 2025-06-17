@@ -170,7 +170,7 @@ Also, the two sets of values must be separated by a comma `,` within the parenth
 This is all a bit complicated to describe, so here we give you the code
 and you only need to click the 'Run code' button.
 
-```{r hist-javelin, exercise=TRUE, fig.height=7, fig.width=9}
+```{r plot-100m-long-jump, exercise=TRUE, fig.height=7, fig.width=9}
 plot(decathlon$`100m`, decathlon$Long.jump)
 ```
 
