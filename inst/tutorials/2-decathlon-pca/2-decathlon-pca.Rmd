@@ -271,6 +271,38 @@ However, it is necessary to describe the linear model,
 as there is a infinite number of lines with the same slope,
 but only one that best fits the data.
 
+### Measuring correlation
+
+While the linear model above visually *suggests* that there is a significant relationship between
+the time to run 100 meters and the distance athletes can jump,
+it doesn't *prove* it.
+
+Instead, we can numerically quantify the "correlation" between the two performances,
+summarising the trend that we observed into a single number that measures how tightly
+connected the two performances are.
+This number is called the "correlation coefficient".
+
+In _R_, the `cor()` function takes two sets of values and calculates
+their correlation coefficient.
+
+Try it below:
+
+```{r cor-100m-long-jmup, exercise=TRUE}
+cor(decathlon$`100m`, decathlon$Long.jump)
+```
+
+The value of a correlation coefficient can only be between `-1` and `1`.
+
+- If it is exactly `1`,  the two sets of values are perfectly correlated.
+  When one value increases by a certain amount, the other value always **increases** proportionally.
+- If it is exactly `-1`, the two sets of values are perfectly "anti-correlated".
+  When one value increases by a certain amount, the other one always **decreases** proportionally.
+- If it is exactly `0`, the two sets of valyes are perfectly "uncorrelated".
+  However one value changes, the other one changes in a random and unpredictable way.
+
+What do you think about the value calculated above?
+Can you describe how it relates to the graph further above?
+
 ## Exercise with Code
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
