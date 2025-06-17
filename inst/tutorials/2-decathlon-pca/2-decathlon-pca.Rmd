@@ -171,7 +171,7 @@ If so, how would you describe it?
 
 - Each point represents an athlete.
 - The position of each point along the horizontal axis shows the time (in seconds) it took them to run 100 meters.
-- The position of each point along the vertical axis shows the distance the same athletes could jump in length (in - meters).
+- The position of each point along the vertical axis shows the distance the same athletes could jump in length (in meters).
 
 It seems that the fastest an athlete can run, the furthest they can jump.
 Of course, this is not surprising, but here we have data to prove it!
