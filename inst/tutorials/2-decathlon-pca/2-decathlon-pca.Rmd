@@ -91,8 +91,12 @@ Try it below!
 
 ```
 
-Note that things get a bit more complicated if the name of the column starts with a digit, for instance the first column called `100m`.
-In that case, you need to "backticks" around the name of the column, like so:
+Notice how the code above only displays the values in that column,
+without the name of the column or the names of the athletes those numbers correspond to.
+
+Also, take note that things get a bit more complicated if the name of the column starts with a digit,
+for instance the first column called `100m`.
+In that case, you need to add "backticks" around the name of the column, like so:
 
 ```{r decathlon-100m, exercise=TRUE}
 decathlon$`100m`
