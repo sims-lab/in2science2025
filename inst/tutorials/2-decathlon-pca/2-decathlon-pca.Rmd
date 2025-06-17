@@ -151,29 +151,40 @@ You can try it by typing `hist(decathlon$Javeline)` in the code chunk below:
 ```
 
 Take a moment to think about what those graphs represent,
-what they are telling you about the data,
-and whether you can spot any meaningful trends.
+what they are telling you about the data.
 
 When you are ready, continue reading below.
 
 - The first and second graphs show us the distance each competitor threw the javelin.
 - The last graph shows the number of competitors who threw the javelin in groups of 5 metres.
 
-## Asking questions
+### Asking questions
 
-Another plotting function is `plot()`, which takes two sets of values and uses those as the coordinates of points on the x-axis and y-axis, respectively.
+Visualisation can be used to explore the data and investigate hypotheses you may have.
+
+For instance, the `plot()` function can also be give two sets of values,
+in which case it will draw a "scatterplot" that uses those two values as the coordinates to place each point.
 For this to work, the two sets must have the same number of values.
-Also, to give two sets of values to the same function (within the same parentheses), they need to be separated by a comma: `,`.
-For instance, try it by typing `` plot(decathlon$`100m`, decathlon$Long.jump) `` in the code chunk below:
+Also, the two sets of values must be separated by a comma `,` within the parentheses of the function.
 
-```{r plot-100m-long-jump, exercise=TRUE, fig.height=7, fig.width=9}
+This is all a bit complicated to describe, so here we give you the code
+and you only need to click the 'Run code' button.
 
+```{r hist-javelin, exercise=TRUE, fig.height=7, fig.width=9}
+plot(decathlon$`100m`, decathlon$Long.jump)
 ```
 
+Take a moment to understand what the plot is showing.
+What does each point represent?
+Can you see any meaningful trend?
+If so, how would you describe it?
 
+- Each point represents an athlete.
+- The position of each point along the horizontal axis shows the time (in seconds) it took them to run 100 meters.
+- The position of each point along the vertical axis shows the distance the same athletes could jump in length (in - meters).
 
-
-
+It seems that the fastest an athlete can run, the furthest they can jump.
+Of course, this is not surprising, but here we have data to prove it!
 
 ## Exercise with Code
 
