@@ -384,6 +384,55 @@ What differences do you see between the last two graphs?
   Values near the edges of the bins can switch to a neighbouring bin when
   the values are scaled and the boundaries of the bins are calculated.
 
+## Principal Component Analysis
+
+You've made it to the main event of this tutorial!
+
+Principal Component Analysis -- abbreviated PCA -- is a powerful technique that we can use to analyse many variables simultaneously.
+In this case, the performance of all the athletes across all the events in the `decathlon` dataset.
+
+Explaining it in details takes a lots of maths, but in essence,
+PCA looks at the variance of each variable (the performance in each discipline),
+and the "covariance" or correlation between those variables,
+to identify the variables that have the most in common
+and help find trends in the dataset.
+
+Running a PCA is easy using the `PCA()` function provided by the package [FactoMineR](https://cran.r-project.org/package=FactoMineR).
+
+You simply need to give the `decathlon` dataset to the `PCA()` function,
+while clarifying that the last three columns (`Rank`, `Points`, and `Competition`)
+are not disciplines but simply different kinds of supplementary data:
+
+- The `Rank` and `Points` columns are numbers.
+  This is called "quantitative" data.
+- The `Competition` column contains a label that indicates the type of competition each athlete participated in.
+  This is called "categorical" data.
+
+We give you the code below, you just need need to click 'Run code' to see the result
+
+```{r pca-decathlon, exercise=TRUE, fig.height=7, fig.width=9}
+PCA(decathlon, quanti.sup = c("Rank", "Points"), quali.sup = "Competition")
+```
+
+Take a moment to inspect the result of the code above (two plots and one message).
+Try to explain in your own words what each the two graphs represents.
+
+### In our words
+
+The first graph shows all the individual athletes,
+in a way that those who had similar performances across all disciplines
+are closer to each other.
+
+The second graph shows the different disciplines,
+how similarly athletes performed in each of them,
+and how much impact each of them had on the overall result.
+
+This information helps us gain insights into questions such as:
+
+- If athletes performs well in a discipline,
+  which other disciplines are they generally good at?
+- Which disciplines should an athlete be good at to win the overall decathlon?
+
 ## Exercise with Code
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
