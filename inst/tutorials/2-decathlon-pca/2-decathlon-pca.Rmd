@@ -423,64 +423,38 @@ The first graph shows all the individual athletes,
 in a way that those who had similar performances across all disciplines
 are closer to each other.
 
+Note that, with this graph alone:
+
+- We can tell for instance that the athletes `Lorenzo` and `NOOL` performed similarly across disciplines.
+- But we cannot say what exactly their performances are in any of the discipline.
+
 The second graph shows the different disciplines,
 how similarly athletes performed in each of them,
-and how much impact each of them had on the overall result.
+and how much impact each of them had on the overall result (points and rank).
 
-This information helps us gain insights into questions such as:
+With this graph alone:
+
+- It is clear that `Points` and `Rank` go in opposite directions.
+  The points an athlete collected, the lower their rank
+  (the athlete with the most points was ranked first).
+- All the disciplines that relate to throwing things
+  (`Javeline`, `Discus`, `Shot.put`) go in the same direction,
+  while disciplines that involve running (`100m`, `400m`, `110m.hurdle`)
+  go in a completely opposite direction.
+  This highlights two main kinds of athletes who are good at one thing or another.
+- Athletes better at throwin and jumping tend to score more points overall.
+
+Combining information from the two graphs above gives us even more insights
+into the data:
+
+- The second graph helps us interpret the first graph.
+  The second graph says that athletes in the top left area of the first graph
+  tend to be better at running, while those in the top right area are better
+  at throwing.
+
+In summary, PCA is a powerful technique,
+which in this case helps us gain insights into questions such as:
 
 - If athletes performs well in a discipline,
   which other disciplines are they generally good at?
 - Which disciplines should an athlete be good at to win the overall decathlon?
-
-## Exercise with Code
-
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
-
-Now write a function that adds any two numbers and then call it:
-
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
-
-## Topic 2
-
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaluated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-### Quiz
-
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
-quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
-  )
-)
-```
-
