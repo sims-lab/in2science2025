@@ -458,3 +458,23 @@ which in this case helps us gain insights into questions such as:
 - If athletes performs well in a discipline,
   which other disciplines are they generally good at?
 - Which disciplines should an athlete be good at to win the overall decathlon?
+
+## Summary
+
+In this tutorial, we have applied Principal Component Analysis (PCA) to a dataset
+that records the performance of athletes in sporting events.
+
+Without going into the mathematical details of the PCA technique,
+we have shown that it can help us rapidly identify and summarise trends in the data.
+
+The PCA technique is used to analyse and interpret many types of data,
+including biological and medical research data, to study the impact of drugs
+or compare different types of cells in our body.
+
+## Credit
+
+Written by Kevin Rue <https://github.com/sims-lab/in2science2025>.
+
+Adapted from an earlier version of this tutorial by Carla Cohen <https://github.com/carlacohen/Decathlon>.
+
+Original analysis by Clement Ponsonnet <https://github.com/clemonster/decathlon-pca>.
