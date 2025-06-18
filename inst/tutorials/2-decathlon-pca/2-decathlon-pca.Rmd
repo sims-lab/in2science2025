@@ -315,6 +315,34 @@ add <- function() {
 }
 ```
 
+## Preprocessing data
+
+### Variance
+
+Variance is a mathematical measure of how spread out a set of number is.
+It simple terms, it tells you how much the values in a dataset differ from the average (mean) value.
+
+- If all the numbers are close to the mean, the variance is small (close to 0).
+- If the numbers are more spread out, the variance is larger (the number can be infinitely large).
+
+The variance is always positive, the minimum value of variance is exactly 0 if all the numbers are identical.
+
+The `var()` function can be given a set of numbers, and calculates the variance for that set.
+For instance, type `var(decathlon$Javeline)` in the code chunk below to calculate the variance
+in the distance that atheletes have thrown javelins.
+
+```{r var-decathlon-javeline, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+Alternatively, the `colVars()` function can be given a whole dataframe,
+and will automatically calculate the variance in each column of the dataframe separately.
+Try it below by typing `colVars(decathlon)`.
+
+```{r colvars-decathlon, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
 ## Topic 2
 
 ### Exercise with Hint
