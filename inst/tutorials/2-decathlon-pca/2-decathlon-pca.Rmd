@@ -303,18 +303,6 @@ The value of a correlation coefficient can only be between `-1` and `1`.
 What do you think about the value calculated above?
 Can you describe how it relates to the graph further above?
 
-## Exercise with Code
-
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
-
-Now write a function that adds any two numbers and then call it:
-
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
-
 ## Preprocessing data
 
 ### Variance
@@ -331,7 +319,7 @@ The `var()` function can be given a set of numbers, and calculates the variance 
 For instance, type `var(decathlon$Javeline)` in the code chunk below to calculate the variance
 in the distance that atheletes have thrown javelins.
 
-```{r var-decathlon-javeline, exercise=TRUE, exercise.eval=TRUE}
+```{r var-decathlon-javeline, exercise=TRUE}
 
 ```
 
@@ -339,8 +327,73 @@ Alternatively, the `colVars()` function can be given a whole dataframe,
 and will automatically calculate the variance in each column of the dataframe separately.
 Try it below by typing `colVars(decathlon)`.
 
-```{r colvars-decathlon, exercise=TRUE, exercise.eval=TRUE}
+```{r colvars-decathlon, exercise=TRUE}
 
+```
+
+### Scaling data
+
+Often, datasets contain data with different levels of variance, which makes them difficult to compare fairly.
+
+For instance, in the previous exercise, we can see that
+the "100m" event has a variance of 0.07
+while the Javeline event has a variance of approximately 23.
+
+To perform any analysis that compare the values of those two events fairly,
+we should "scale" the data of the two events.
+
+Briefly, "scaling" replaces a set of values into equivalent values that have a mean of 0 and a variance of 1.
+It does it as follows:
+
+- calculate the mean and the variance for a set of value.
+- subtracts the mean from every value.
+- divide every new value by the square root of the variance (a value called the "standard deviation").
+
+Importantly, "scaling" does not change the *shape* of the data,
+it only changes the numbers to be centered on 0 and spread within a similar distance from 0.
+
+Let's illustrate it with an example.
+
+In the first code chunk below, type `hist(decathlon$Javeline)` to display the distribution of distances at which javelins were thrown.
+
+```{r hist-javelin-prescale, exercise=TRUE}
+hist(decathlon$Javeline)
+```
+
+In the next code chunk, type `scaled_javeline <- scale(decathlon$Javeline)` to calculate scaled values for the Javelin performance.
+
+```{r scale-javelin, exercise=TRUE}
+scaled_javeline <- scale(decathlon$Javeline)
+```
+
+Finally, in the next code chunk, type 
+
+```{r hist-javelin-postscale, exercise=TRUE}
+hist(scaled_javeline, breaks = 5)
+```
+
+What differences do you see between the last two graphs?
+
+- Most importantly, the values along the horizontal axis have change from [50, 75] to [-2, 3].
+  It might not look like it is *visually* centered on 0,
+  but that is because the original numbers are not distributed *symmetrically* around a mean value.
+  You can trust the maths that the overall mean of the scaled values is indeed 0!
+- You will also notice that the height of the bars have changed slightly,
+  as if the *shape* of the data has changed.
+  This is actually an artefact of the way the histogram creates "bins".
+  Values near the edges of the bins can switch to a neighbouring bin when
+  the values are scaled and the boundaries of the bins are calculated.
+
+## Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
 ```
 
 ## Topic 2
