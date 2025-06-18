@@ -305,7 +305,7 @@ Can you describe how it relates to the graph further above?
 
 ## Preprocessing data
 
-### Variance
+### Measuring variance
 
 Variance is a mathematical measure of how spread out a set of number is.
 It simple terms, it tells you how much the values in a dataset differ from the average (mean) value.
@@ -357,19 +357,19 @@ Let's illustrate it with an example.
 In the first code chunk below, type `hist(decathlon$Javeline)` to display the distribution of distances at which javelins were thrown.
 
 ```{r hist-javelin-prescale, exercise=TRUE}
-hist(decathlon$Javeline)
+
 ```
 
 In the next code chunk, type `scaled_javeline <- scale(decathlon$Javeline)` to calculate scaled values for the Javelin performance.
 
 ```{r scale-javelin, exercise=TRUE}
-scaled_javeline <- scale(decathlon$Javeline)
+
 ```
 
 Finally, in the next code chunk, type 
 
 ```{r hist-javelin-postscale, exercise=TRUE}
-hist(scaled_javeline, breaks = 5)
+
 ```
 
 What differences do you see between the last two graphs?
